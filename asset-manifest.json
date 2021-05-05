@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DateConveter/static/css/main.1a88fadf.chunk.css",
+    "main.js": "/DateConveter/static/js/main.2406b099.chunk.js",
+    "main.js.map": "/DateConveter/static/js/main.2406b099.chunk.js.map",
+    "runtime-main.js": "/DateConveter/static/js/runtime-main.da2faa81.js",
+    "runtime-main.js.map": "/DateConveter/static/js/runtime-main.da2faa81.js.map",
+    "static/js/2.3c7c8076.chunk.js": "/DateConveter/static/js/2.3c7c8076.chunk.js",
+    "static/js/2.3c7c8076.chunk.js.map": "/DateConveter/static/js/2.3c7c8076.chunk.js.map",
+    "static/js/3.c5c879c8.chunk.js": "/DateConveter/static/js/3.c5c879c8.chunk.js",
+    "static/js/3.c5c879c8.chunk.js.map": "/DateConveter/static/js/3.c5c879c8.chunk.js.map",
+    "index.html": "/DateConveter/index.html",
+    "static/css/main.1a88fadf.chunk.css.map": "/DateConveter/static/css/main.1a88fadf.chunk.css.map",
+    "static/js/2.3c7c8076.chunk.js.LICENSE.txt": "/DateConveter/static/js/2.3c7c8076.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da2faa81.js",
+    "static/js/2.3c7c8076.chunk.js",
+    "static/css/main.1a88fadf.chunk.css",
+    "static/js/main.2406b099.chunk.js"
+  ]
+}
