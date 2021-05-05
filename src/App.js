@@ -5,7 +5,7 @@ class App extends Component {
     super();
     this.state = {
       items: [],
-      input: '',  
+      input: '',
       current: new Date().toUTCString(),
       currentdate: new Date().toLocaleDateString(),
       updatedDate: '0 day'
@@ -15,22 +15,22 @@ class App extends Component {
   getData = e => {
     this.setState({ input: e.target.value })
   }
-  updateDate =() => {
-   let diff = new Date() - new Date(this.state.input);
-    if (this.state.updatedDate === null ||this.state.input=== '') {
-    //  this.setState({ updatedDate: '0 day' })
+  updateDate = () => {
+    let diff = new Date() - new Date(this.state.input);
+    if (this.state.updatedDate === null || this.state.input === '') {
+      //  this.setState({ updatedDate: '0 day' })
       alert("enter valid date")
     }
     else {
       this.setState({ updatedDate: (Math.floor(diff / (1000 * 60 * 60 * 24)) + " days") })
-      
+
       console.log(this.state.updatedDate);
       console.log((Math.floor(diff / (1000 * 60 * 60 * 24)) + " days"));
-      
+
       const item = { date: this.state.input, days: this.state.updatedDate };
       this.setState({ items: this.state.items.concat(item) });
       console.log(this.state.items)
-  //    console.log(this.state.updatedDate);
+      //    console.log(this.state.updatedDate);
     }
   }
 
