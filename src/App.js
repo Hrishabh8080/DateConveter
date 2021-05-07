@@ -16,24 +16,35 @@ class App extends Component {
     this.setState({ input: e.target.value })
   }
   updateDate = () => {
-    let diff = new Date() - new Date(this.state.input);
     if (this.state.updatedDate === null || this.state.input === '') {
       //  this.setState({ updatedDate: '0 day' })
       alert("enter valid date")
     }
     else {
-      this.setState({ updatedDate: (Math.floor(diff / (1000 * 60 * 60 * 24)) + " days") })
-
-      console.log(this.state.updatedDate);
-      console.log((Math.floor(diff / (1000 * 60 * 60 * 24)) + " days"));
-
+      
+      
+      let x = setInterval(() => {
+        
+        let diff = new Date(this.state.input) - new Date();
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        this.setState({ updatedDate: `${days} d : ${hours} h :${minutes} m : ${seconds} s` });
+        if (diff < 0) {
+          clearInterval(x);
+          this.setState({ updatedDate: "Expire Date/CountDown" })
+        }
+        
+      }, 1000);
       const item = { date: this.state.input, days: this.state.updatedDate };
       this.setState({ items: this.state.items.concat(item) });
       console.log(this.state.items)
       //    console.log(this.state.updatedDate);
     }
   }
-
+  
   render() {
     return (
       <div>
