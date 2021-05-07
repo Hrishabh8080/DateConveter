@@ -22,6 +22,8 @@ class App extends Component {
     }
     else {
       
+      let diff = new Date(this.state.input) - new Date();
+      let days = Math.floor(diff / (1000 * 60 * 60 * 24));
       
       let x = setInterval(() => {
         
@@ -38,7 +40,7 @@ class App extends Component {
         }
         
       }, 1000);
-      const item = { date: this.state.input, days: this.state.updatedDate };
+      const item = { date: this.state.input, days: days };
       this.setState({ items: this.state.items.concat(item) });
       console.log(this.state.items)
       //    console.log(this.state.updatedDate);
